@@ -1,0 +1,21 @@
+package Arrays.Easy;
+
+public class MoveZeroes {
+    public void moveZeroes(int[] nums) {
+        int j=0 ;    //assume the last index non-zero index
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]!=0){
+                if(i!=j){
+                    int temp=nums[i];
+                    nums[i]=nums[j];
+                    nums[j]=temp;
+
+                }
+                j++;
+
+            }
+        }
+        
+    }
+    
+}
